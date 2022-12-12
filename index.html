@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Etch-A-Sketch</title>
+  </head>
+  <body>
+    <div class="flex-container"></div>
+    <div class="header">
+      <div class="title"><h1>Etch-A-Sketch</h1></div>
+      <div class="mode">Press A to toggle the coloring pen!</div>
+    </div>
+    <div class="info">
+      Press A to quickly toggle between coloring and not coloring.
+      <br />
+      Press R to reset the board.
+    </div>
+    <div class="content"></div>
+    <div class="board"></div>
+    <div class="buttons">
+      <button class="black" onClick="changeColor('black')">Black</button>
+      <button class="white" onClick="changeColor('white')">Eraser</button>
+      <button class="random" onClick="changeColor('random')">Random</button>
+      <button class="toggle" onClick="toggleGrid()">
+        Toggle Grid Lines (T)
+      </button>
+      <button class="reset" onClick="resetBoard()">Reset (R)</button>
+      <div class="color-box">
+        <input type="color" id="color-select" /> <span>Pen Color</span>
+      </div>
+    </div>
+    <div>
+      <input
+        type="text"
+        placeholder="Size of Board"
+        value="16"
+        onchange="changeSize(this.value)"
+      />
+      <button>Set Size</button>
+    </div>
+    <div class="error">Input must be between 2 and 100.</div>
+  </body>
+  <script src="script.js"></script>
+</html>

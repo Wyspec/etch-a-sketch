@@ -1,0 +1,13 @@
+on webPage load {
+    create 16x16 grid of square <divs> inside parent container <div>
+}
+
+onHover
+    grid divs change color
+        -> add new class to div (or)
+        change div background using JS
+
+button
+    prompt User for grid size
+    remove existing grid, create new grid with specified size (max 100)
+    
